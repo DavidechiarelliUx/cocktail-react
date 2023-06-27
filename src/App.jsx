@@ -3,7 +3,7 @@ function App() {
 
   return (
     <>
-<div>cocktail</div>
+<div className="App"> Master </div>
     </>
   )
 }
