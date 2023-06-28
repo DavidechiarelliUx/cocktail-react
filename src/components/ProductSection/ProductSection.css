@@ -34,3 +34,17 @@ p {
     list-style-type: none;
 }
 
+.ProductSection__close--button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    border: 0;
+    transition: transform 0.35s;
+    cursor: pointer;
+  }
+  
+  .ProductSection__close--button:active {
+    transform: rotate(359deg);
+  }
+  
