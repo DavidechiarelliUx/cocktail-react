@@ -1,0 +1,10 @@
+.ProductList {
+    padding: 0 30px;
+  }
+  
+  .ProductList__list {
+    display: flex;
+    gap: 12px;
+    overflow-x: scroll;
+  }
+  
