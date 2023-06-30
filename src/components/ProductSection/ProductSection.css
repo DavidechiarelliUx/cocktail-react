@@ -1,6 +1,11 @@
+.ProductSection{
+    position: relative;
+}
+
 .ProductSection p{
     font-size: 0.9rem;
     color: gray;
+    pos
 }
 
 .ProductSection__text{
