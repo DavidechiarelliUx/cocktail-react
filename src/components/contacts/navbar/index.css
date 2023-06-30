@@ -1,0 +1,39 @@
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    background-color: #f2f2f2;
+    padding: 0 20px;
+    list-style: none;
+    margin: 0;
+    margin-bottom: 20px;
+}
+
+.Navbar li {
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-right: 20px;
+    text-transform: uppercase;
+}
+
+.Navbar li:hover {
+    color: #0077cc;
+}
+
+.Navbar input[type="text"] {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.2s ease-in-out;
+}
+  
+.Navbar input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 1px 6px rgba(0, 0, 0, 0.2);
+}

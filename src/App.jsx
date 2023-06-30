@@ -2,6 +2,7 @@ import { useState } from "react";
 import ProductSection from "./components/ProductSection/ProductSection"
 import ProductList from "./components/ProductList"
 import Contacts from "./components/contacts/Contacts";
+import Navbar from "./components/contacts/navbar";
 import "./App.css"
 
 function App() {
@@ -30,13 +31,10 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <ul>
-        <li onClick={() => setProductSection("")}>Home</li>
-        <li onClick={() => setProductSection("contacts")}>Contacts</li>
-      </ul>
-      {onRender()}
-    </div>
+<div className="App">
+  <Navbar setProductSection={setProductSection}/>
+  {onRender()}
+</div>
   );
 }
 

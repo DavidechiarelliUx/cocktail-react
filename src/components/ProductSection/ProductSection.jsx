@@ -7,7 +7,7 @@ const ProductSection = ({ productSection, setProductSection }) => {
 
   useEffect(() => {
     GET("?s=" + productSection).then((data) => setProductData(data.drinks[0]));
-  }, []);
+  }, [productSection]);
 
   const onHandleClick = () => setProductSection("");
 
