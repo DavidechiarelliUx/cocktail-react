@@ -3,10 +3,12 @@ import ProductSection from "./components/ProductSection/ProductSection"
 import ProductList from "./components/ProductList"
 import Contacts from "./components/contacts/Contacts";
 import Navbar from "./components/contacts/navbar";
+import Filters from "./components/filters";
 import "./App.css"
 
 function App() {
   const [productSection, setProductSection] = useState("");
+  const [categoryList, setCategoryList] = useState(["rum", "vodka", "gin", "tequila", "salt"]);
 
   const onRender = () => {
     switch (productSection) {
@@ -15,9 +17,19 @@ function App() {
       case "":
         return (
           <>
-            <ProductList name="rum" setProductSection={setProductSection} />
-            <ProductList name="vodka" setProductSection={setProductSection} />
-            <ProductList name="gin" setProductSection={setProductSection} />
+            <Filters
+              categoryList={categoryList}
+              setCategoryList={setCategoryList}
+            />
+            {categoryList
+              .filter((category) => category.length > 1)
+              .map((category, i) => (
+                <ProductList
+                  name={category}
+                  setProductSection={setProductSection}
+                  key={i}
+                />
+              ))}
           </>
         );
       default:
@@ -28,13 +40,13 @@ function App() {
           />
         );
     }
-  };
+  }
 
   return (
-<div className="App">
-  <Navbar setProductSection={setProductSection}/>
-  {onRender()}
-</div>
+    <div className="App">
+      <Navbar setProductSection={setProductSection}/>
+      {onRender()}
+    </div>
   );
 }
 
